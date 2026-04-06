@@ -22,9 +22,17 @@ exports.buscarDados = (req, res) => {
 
   database.query(sql, (err, results) => {
     if (err) {
-      res.status(500).send("Erro ao buscar dados");
-    } else {
-      res.json(results);
+      console.error(err); // log pra debug
+      return res.status(500).json({ erro: "Erro ao buscar dados" });
     }
+
+    const dados = results.map((row) => ({
+      id: row.id,
+      nivelLixo: row.nivel_lixo,
+      temperatura: row.temperatura,
+      dataHora: row.data_hora,
+    }));
+
+    res.json(dados);
   });
 };
