@@ -1,2 +1,16 @@
-# iot-waste-management-backend
-Backend de uma aplicação de gerenciamento de resíduos baseada em IoT, responsável pelo processamento, armazenamento e disponibilização de dados coletados por dispositivos inteligentes. Projeto desenvolvido para o Projeto Integrado do curso de Engenharia de Computação da Universidade Virtual do Estado de São Paulo(UNIVESP).
+# IoT Waste Management Backend
+
+Backend de um sistema de composteira inteligente baseado em IoT, responsável pelo recebimento, processamento e armazenamento de dados ambientais coletados por sensores.
+
+## 🛠️ Tecnologias
+- Node.js
+- Express
+- MySQL
+- React
+- ESP32
+- DHT11/DHT22
+
+## 📡 Funcionalidades
+- Recebimento de dados via HTTP
+- Armazenamento de temperatura e umidade
+- Monitoramento em tempo real
