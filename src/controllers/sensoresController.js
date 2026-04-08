@@ -1,6 +1,5 @@
 const database = require("../config/database");
 
-// 📥 Inserir dados
 exports.inserirDados = (req, res) => {
   const { nivel_lixo, temperatura } = req.body;
 
@@ -16,13 +15,12 @@ exports.inserirDados = (req, res) => {
   });
 };
 
-// 📤 Buscar dados
 exports.buscarDados = (req, res) => {
   const sql = "SELECT * FROM sensores ORDER BY id DESC";
 
   database.query(sql, (err, results) => {
     if (err) {
-      console.error(err); // log pra debug
+      console.error(err);
       return res.status(500).json({ erro: "Erro ao buscar dados" });
     }
 

@@ -10,7 +10,7 @@ app.use(express.json());
 const sensoresRoutes = require("./routes/sensores.route");
 
 // usar rotas
-app.use("/", sensoresRoutes);
+app.use("/dados", sensoresRoutes);
 
 // iniciar servidor
 app.listen(3000, () => {
